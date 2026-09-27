@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="FitPlanner.API/FitPlanner.API.csproj" />
+  <Project Path="FitPlanner.Application/FitPlanner.Application.csproj" />
+  <Project Path="FitPlanner.Domain/FitPlanner.Domain.csproj" />
+  <Project Path="FitPlanner.Infraestructure/FitPlanner.Infraestructure.csproj" />
+</Solution>
