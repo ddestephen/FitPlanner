@@ -1,6 +1,13 @@
 @FitPlanner.API_HostAddress = http://localhost:5225
 
-GET {{FitPlanner.API_HostAddress}}/weatherforecast/
+### 1. Obtener todos los ejercicios
+GET http://localhost:5157/api/Ejercicios
 Accept: application/json
 
-###
+### 2. Crear un nuevo ejercicio
+POST http://localhost:5157/api/Ejercicios
+Content-Type: application/json
+
+{
+  "nombre": "Sentadilla"
+}

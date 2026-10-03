@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FitPlanner.Application\FitPlanner.Application.csproj" />
+    <ProjectReference Include="..\FitPlanner.Domain\FitPlanner.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>
