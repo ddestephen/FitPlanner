@@ -23,4 +23,18 @@ public class EjercicioRepository : IEjercicioRepository {
 
 		return ejercicio;
 	}
+
+	public async Task<Ejercicio?> GetByIdAsync(int id) {
+		return await _context.Ejercicios.FindAsync(id);
+	}
+
+	public async Task UpdateAsync(Ejercicio ejercicio) {
+		_context.Ejercicios.Update(ejercicio);
+		await _context.SaveChangesAsync();
+	}
+
+	public async Task DeleteAsync(Ejercicio ejercicio) {
+		_context.Ejercicios.Remove(ejercicio);
+		await _context.SaveChangesAsync();
+	}
 }

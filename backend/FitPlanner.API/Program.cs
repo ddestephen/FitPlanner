@@ -13,6 +13,7 @@ var connectionString =
         "Falta la cadena de conexión"
     );
 
+builder.Services.AddApplication();
 builder.Services.AddInfraestructure(connectionString);
 
 builder.Services.AddControllers();

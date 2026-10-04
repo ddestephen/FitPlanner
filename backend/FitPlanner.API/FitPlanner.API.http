@@ -1,13 +1,28 @@
 @FitPlanner.API_HostAddress = http://localhost:5225
 
 ### 1. Obtener todos los ejercicios
-GET http://localhost:5157/api/Ejercicios
+GET http://localhost:5225/api/Ejercicios
 Accept: application/json
 
 ### 2. Crear un nuevo ejercicio
-POST http://localhost:5157/api/Ejercicios
+POST http://localhost:5225/api/Ejercicios
 Content-Type: application/json
 
 {
   "nombre": "Sentadilla"
 }
+
+### 3. Obtener ejercicio por ID
+GET http://localhost:5225/api/Ejercicios/1
+Accept: application/json
+
+### 4. Actualizar ejercicio
+PUT http://localhost:5225/api/Ejercicios/1
+Content-Type: application/json
+
+{
+  "nombre": "Sentadilla con barra"
+}
+
+### 5. Eliminar ejercicio
+DELETE http://localhost:5225/api/Ejercicios/1
