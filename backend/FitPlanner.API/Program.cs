@@ -1,6 +1,7 @@
 using DotNetEnv;
 using FitPlanner.Infraestructure;
 using Scalar.AspNetCore;
+using FitPlanner.Application;
 
 var builder = WebApplication.CreateBuilder(args);
 
