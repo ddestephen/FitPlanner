@@ -1,6 +1,14 @@
 import type { Ejercicio } from '../types/ejercicio.types';
 
-export function EjercicioCard({ id, nombre }: Ejercicio) {
+interface EjercicioCardProps extends Ejercicio {
+    onEliminar: (id: number) => void;
+}
+
+export function EjercicioCard({
+    id,
+    nombre,
+    onEliminar
+}: EjercicioCardProps) {
     return (
         <article className="bg-slate-800 border border-slate-700 rounded-xl p-5 flex flex-col justify-between hover:border-indigo-500 transition-colors shadow-sm">
             <div>
@@ -19,12 +27,22 @@ export function EjercicioCard({ id, nombre }: Ejercicio) {
                 </h3>
             </div>
 
-            <button
-                disabled
-                className="w-full bg-slate-900/80 text-slate-400 text-sm font-medium py-2.5 px-4 rounded-lg cursor-not-allowed border border-slate-700"
-            >
-                Agregar al plan (Próximamente)
-            </button>
+            <div className="flex flex-col gap-2">
+                <button
+                    disabled
+                    className="w-full bg-slate-900/80 text-slate-400 text-sm font-medium py-2.5 px-4 rounded-lg cursor-not-allowed border border-slate-700"
+                >
+                    Agregar al plan (Próximamente)
+                </button>
+
+                <button
+                    type="button"
+                    onClick={() => onEliminar(id)}
+                    className="w-full bg-red-600/10 hover:bg-red-600 text-red-400 hover:text-white text-sm font-medium py-2.5 px-4 rounded-lg border border-red-500/30 transition-colors cursor-pointer"
+                >
+                    Eliminar ejercicio
+                </button>
+            </div>
         </article>
     );
 }
